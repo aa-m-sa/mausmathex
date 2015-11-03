@@ -1,0 +1,118 @@
+% .sty for mathematics exercise answers and reports
+% use XeLaTeX or LuaLaTex for utf-8 support (fontspac)
+% not a very polished package
+
+\ProvidesPackage{mausmathex.sty}
+
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+
+\usepackage{fontspec}
+
+\setmainfont[Ligatures=TeX]{Latin Modern Roman}
+% default font with ligatures
+
+\usepackage{unicode-math}
+\setmathfont[math-style=TeX]{Latin Modern Math}
+%\setmathfont[math-style=TeX]{XITS Math}
+
+\usepackage{setspace}   % control spacing if needed
+%\onehalfspacing
+
+%\usepackage{microtype} % does microtype have Xe / LuaLaTex support?
+
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+%\setdefaultlanguage{finnish}
+
+\usepackage{listings}          % Code listings
+
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\usepackage{placeins}   % provides \FloatBarrier
+
+\lstset{                       % Adjust code listings
+    extendedchars=true,
+    inputencoding=utf8,
+    showstringspaces=false,
+    basicstyle=\footnotesize\ttfamily
+}
+
+%% custom theorem env's (in Finnish)
+
+\theoremstyle{definition}
+\newtheorem{maar}{Määritelmä}
+
+\theoremstyle{definition}
+\newtheorem{esim}{Esimerkki}
+
+\theoremstyle{plain}
+\newtheorem{lause}{Lause}
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{remark}
+\newtheorem{huom}{Huomautus}
+
+\theoremstyle{remark}
+\newtheorem*{merk}{Merkintä}
+
+% additional
+\theoremstyle{plain}
+\newtheorem*{todo}{Todo}
+
+\theoremstyle{plain}
+\newtheorem{kysymys}{Kysymys}
+
+\theoremstyle{remark}
+\newtheorem*{pohdi}{Pohdi}
+
+
+%% symbols and notation:
+
+% common
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Natural}{\mathbb{N}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\euler}{e}
+\newcommand{\iu}{i}
+
+% dx for integrals
+\newcommand{\df}[1]{\, \mathrm{d} #1}
+
+% set mark-up and related
+\DeclarePairedDelimiterX\Set[2]{\lbrace}{\rbrace}{ #1 \,\delimsize|\, #2 }
+\DeclarePairedDelimiterX\PlainSet[1]{\lbrace}{\rbrace}{ #1 }
+
+% gcd
+\DeclareMathOperator{\syt}{syt} % fi
+
+% vector notation
+\newcommand{\vect}[1]{\ensuremath{\mathbf{#1}}}
+
+% CS notation thingys
+\newcommand{\BigO}[1]{\ensuremath{\mathcal{O}\left(#1\right)}}
+
+% statistics
+\newcommand*\mean[1]{\overline{#1}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\E}{\mathrm{E}}
+
+% matrix algebra
+\newcommand{\rank}{\mathrm{rank}}
+
+% norms, abs
+%\providecommand{\abs}[1]{\lvert #1 \rvert}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+%% Custom reference with nameref:
+
+\newcommand{\customref}[1]{\ref{#1}.~''\nameref{#1}''}

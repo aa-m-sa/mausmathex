@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{mausmathex}     % remove clutter
+
+% compile with e.g. latexmk --xelatex
+
+%suppress numbering for subsections
+\setcounter{secnumdepth}{1}
+
+% if we need a bibliography uncomment the following
+%\usepackage[hyperref=true, style=alphabetic]{biblatex}
+
+% quick hack for a more sensible article entries in bib
+% consider more elaborate biblatex style file as in
+%%http://tex.stackexchange.com/questions/10682/suppress-in-biblatex
+%\renewbibmacro{in:}{%
+%  \ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
+%\addbibresource{invexam.bib}
+
+% Set these useful commands...
+\newcommand{\Student}{Firstname Surname}
+\newcommand{\StudentId}{00000000}
+\newcommand{\Email}{first.surname@helsinki.fi}
+\newcommand{\CourseName}{Introduction to Whatever \hfill Autumn 2015}
+\newcommand{\ProblemSet}{Answers to Exercise Set 0}
+
+
+\begin{document}
+    % ... they are used in this frankenarticle title / top matter thing.
+    % (TODO: impelementation -> to the package file)
+
+    \noindent
+    {\bf \CourseName}
+
+    \noindent
+    \ProblemSet
+
+    \bigskip
+
+    \begin{center}
+        {\Large \bf \Student} \\
+        Student id \StudentId \\
+        \today
+    \end{center}
+
+    % for short-ish homework sets separate page for ToC seems excessive
+    % so we stick it on the same page with the top matter
+    \tableofcontents
+
+    \newpage
+
+    % main matter
+
+    \section{Pen-and-paper problems}
+    \label{sec:pen_and_paper_problems}
+
+
+    \subsection{Problem 1}
+    \label{sub:problem_1}
+
+    \section{Programming problems}
+    \label{sec:programming_problems}
+
+
+
+\end{document}
