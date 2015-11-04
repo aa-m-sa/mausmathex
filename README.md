@@ -1,3 +1,5 @@
 # mausmathex
 
-a collection of useful LaTeX stuff for math-heavy homework
+My LaTeX template + other helpful stuff for math-heavy homework.
+
+Recommended way to compile: ``latexmk -pdflatex="lualates %O %S" -pdf -dvi- -ps- exercise_texfile``̀
