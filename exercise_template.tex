@@ -1,7 +1,8 @@
 \documentclass[12pt]{article}
-\usepackage{mausmathex}     % remove clutter
+\usepackage{mausmathex}     % remove clutter -> most things in .sty
 
-% compile with e.g. latexmk --xelatex
+% homework template to be used with mausmathex
+% compile with e.g. latexmk --xelatex or lualatex
 
 %suppress numbering for subsections
 \setcounter{secnumdepth}{1}
@@ -14,14 +15,14 @@
 %%http://tex.stackexchange.com/questions/10682/suppress-in-biblatex
 %\renewbibmacro{in:}{%
 %  \ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
-%\addbibresource{invexam.bib}
+%\addbibresource{bibfile.bib}  % biblatex .bib file
 
 % Set these useful commands...
 \newcommand{\Student}{Firstname Surname}
 \newcommand{\StudentId}{00000000}
-\newcommand{\Email}{first.surname@helsinki.fi}
+\newcommand{\Email}{first.surname@cs.helsinki.fi}
 \newcommand{\CourseName}{Introduction to Whatever \hfill Autumn 2015}
-\newcommand{\ProblemSet}{Answers to Exercise Set 0}
+\newcommand{\ProblemSet}{Problem Set 0}
 
 
 \begin{document}
@@ -32,15 +33,18 @@
     {\bf \CourseName}
 
     \noindent
-    \ProblemSet
+    Homework report for
+    {\bf \ProblemSet}
 
     \bigskip
 
-    \begin{center}
-        {\Large \bf \Student} \\
+    {\raggedright
+        {\bf \Student} \\
+        {\texttt \Email } \\
         Student id \StudentId \\
         \today
-    \end{center}
+    }
+
 
     % for short-ish homework sets separate page for ToC seems excessive
     % so we stick it on the same page with the top matter
