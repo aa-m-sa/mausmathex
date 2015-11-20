@@ -1,6 +1,9 @@
 \documentclass[12pt]{article}
 \usepackage{mausmathex}     % remove clutter -> most things in .sty
 
+\usepackage{fancyhdr}       % for page numbers in a footer
+\usepackage{lastpage}
+
 % homework template to be used with mausmathex
 % compile with e.g. latexmk --xelatex or lualatex
 
@@ -26,6 +29,12 @@
 
 
 \begin{document}
+    % fancyhdr + lastpage: page numbering
+    \pagestyle{fancyplain}
+    \fancyhf{}
+    \cfoot{\thepage \, (\pageref{LastPage})}
+    \renewcommand{\headrulewidth}{0pt}
+
     % ... they are used in this frankenarticle title / top matter thing.
     % (TODO: impelementation -> to the package file)
 
