@@ -1,0 +1,7 @@
+language: latex
+script: make
+addons:
+    apt:
+        packages:
+            - texlive-full
+            - latexmk
