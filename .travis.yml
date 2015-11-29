@@ -1,3 +1,4 @@
 language: latex
-install: ./install_texlive.sh
-script: make
+script:
+    - ./install_texlive.sh
+    - make
