@@ -7,7 +7,6 @@
 # and
 # https://github.com/datakurre/tutkielma/blob/master/texlive.sh
 
-TARGET_DIR=$PWD/texlive
 rm -rf $TARGET_DIR
 
 PROFILE=texlive.profile
@@ -84,5 +83,4 @@ export TEXDIR=$TARGET_DIR
 export TEXMFLOCAL=$TARGET_DIR/texmf-local
 export TEXMFSYSCONFIG=$TARGET_DIR/texmf-config
 export TEXMFSYSVAR=$TARGET_DIR/texmf-var
-export PATH=$TARGET_DIR/bin/x86_64-linux:$PATH
 

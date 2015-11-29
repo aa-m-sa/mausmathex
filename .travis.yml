@@ -1,4 +1,7 @@
-language: latex
-script:
+language: generic
+install:
+    - export TARGET_DIR=$PWD/texlive
     - ./install_texlive.sh
+    - export PATH=$TARGET_DIR/bin/x86_64-linux:$PATH
+script:
     - make
