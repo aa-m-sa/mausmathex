@@ -3,7 +3,7 @@ TEXFILE := exercise_template
 all: $(TEXFILE).pdf
 
 $(TEXFILE).pdf: $(TEXFILE).tex mausmathex.sty
-	latexmk -pdflatex="lualatex %O %S" -pdf -ps- -dvi- -recorder -silent $(TEXFILE)
+	latexmk -pdflatex="lualatex %O %S" -pdf -ps- -dvi- -recorder $(TEXFILE)
 
 clean:
 	latexmk -C -silent
