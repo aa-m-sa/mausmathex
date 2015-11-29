@@ -5,3 +5,11 @@ install:
     - export PATH=$TARGET_DIR/bin/x86_64-linux:$PATH
 script:
     - make
+deploy:
+    provider: releases
+    api_key:
+        secure: "e6Q/nrDjH5IXCQ4kmxyBmPAxENyhbwZd6Z31gTo7Qcm/TbtvJIVf+zzGqbR77Oc3XAfBuL8f4/oDwXzEmVq/OAVywvSfJYVM4TW+FI5BfhJamCcDXdCEScC/jANhJ89JpLrp/6kqOoe6FR1eTOFkT03CH6xEirSnDiV4Nnqfy5XL/mVZs1gjg+EXKb414bwkFpIuxp1F1G7w8S1nviEX4k+pyLZNez2Zre9CSyBE81/Pz9o/jYF5AOqfiIASuipdfq/p/2R8gWR4YEdYpQzZ/vjQZ56BjbcZwlY8DCFOjREUe+fLMqa+9BQ74iNmeNUV+rQ4jr/xGQVD9I4//6Qk8qok0Jb0wGP1aqCLIi/9jALeQxrrBy4J9YkMZJTf/F76dikdO1YVXhrHIgbnk3/1kXfUYS34zX72fqPA2iXJh3r2SjNxNbJHD7pMtmmBBMAYV5G0zIoNCOm6/b3AONEkzTdADjLGUXQUHVXs7VG+a5srEqqtZK8vb8Hmp+oUr9T0nN6VNfnz5+CLJ8+tcdKOFD8QHxNo5gaG6ez+9RMOewwsNIYhfku1zLYP6n6RMKPdtbcLAF1jtxf8ss6I790ccfD6heGIUnht2XwBk16YYLuXCilRNtgGlxsJ3NpCKQHQ5hyrBgbtpmPara30bOf6yxv3R7mVC9YP9zE5uVbWyZ8="
+    file: "exercise_template.pdf"
+    skip_cleanup: true
+    on:
+        tags: true
