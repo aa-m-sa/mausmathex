@@ -23,6 +23,8 @@ TEXMFSYSVAR $TARGET_DIR/texmf-var
 TEXMFVAR $TEXMFSYSVAR
 binary_x86_64-linux 1
 collection-basic 1
+collection-bibtexextra 1
+collection-binextra 1
 collection-fontsextra 1
 collection-fontsrecommended 1
 collection-fontutils 1

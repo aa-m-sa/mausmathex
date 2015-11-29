@@ -1,7 +1,3 @@
 language: latex
 install: ./install_texlive.sh
 script: make
-addons:
-    apt:
-        packages:
-            - latexmk
