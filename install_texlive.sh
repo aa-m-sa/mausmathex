@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# ~stupid~ awesome TravisUbuntu 12.04 has outdated texlive so we do an automatical install
+# ~stupid~ awesome TravisUbuntu 12.04 has outdated texlive so we do an automatical TexLive install
+
+# this script is meant only for Travis testing purposes; please use your own systems package manager(or equivalent) to install TexLive
 
 # idea based on
 # https://github.com/thomasjo/travis-texlive/blob/master/prepare.sh
