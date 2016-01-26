@@ -12,17 +12,35 @@
 
 \usepackage{fontspec}
 
+%font with ligatures
+% latin modern:
+
 \setmainfont[Ligatures=TeX]{Latin Modern Roman}
-% default font with ligatures
+
+% XITS (Times like)
+%\setmainfont[Ligatures=TeX]{XITS}
+
+% Tex Gyre Pagella (Palatino like)
+%\setmainfont[Ligatures=TeX]{Tex Gyre Pagella}
 
 \usepackage{unicode-math}
+
+% Corresponding math fonts
+
+% latin modern
 \setmathfont[math-style=TeX]{Latin Modern Math}
+\AtBeginDocument{\let\setminus\smallsetminus} % workaround a \setminus = (no glyph) unicode-math / lmodern bug
+
+% XITS
 %\setmathfont[math-style=TeX]{XITS Math}
+
+% Asana (Palatino like)
+%\setmathfont[math-style=TeX]{Asana Math}
 
 \usepackage{setspace}   % control spacing if needed
 %\onehalfspacing
 
-%\usepackage{microtype} % does microtype have Xe / LuaLaTex support?
+\usepackage{microtype} % does microtype have Xe / LuaLaTex support? yes
 
 \usepackage{polyglossia}
 \setdefaultlanguage{english}
