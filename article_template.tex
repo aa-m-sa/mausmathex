@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{mausmathex}     % remove clutter -> most things in .sty
+
+\usepackage{fancyhdr}       % for page numbers in a footer
+\usepackage{lastpage}
+
+% homework template to be used with mausmathex
+% compile with e.g. latexmk --xelatex or lualatex
+
+%suppress numbering for subsections
+\setcounter{secnumdepth}{0}
+
+% if we need a bibliography uncomment the following
+%\usepackage[hyperref=true, style=alphabetic]{biblatex}
+
+% quick hack for a more sensible article entries in bib
+% consider more elaborate biblatex style file as in
+%%http://tex.stackexchange.com/questions/10682/suppress-in-biblatex
+%\renewbibmacro{in:}{%
+%  \ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
+%\addbibresource{bibfile.bib}  % biblatex .bib file
+
+% Set these useful commands...
+\newcommand{\MyName}{Firstname Surname}
+\newcommand{\MyTitle}{Something}
+\newcommand{\Email}{first.surname@cs.helsinki.fi}
+
+
+\begin{document}
+    \title{\MyTitle}
+    \author{\MyName}
+    \date{\today}
+    \maketitle
+
+    \begin{abstract}
+        Abstract here.
+    \end{abstract}
+
+    \newpage
+
+    \tableofcontents
+
+    \newpage
+
+    % main matter
+
+    \section{First Section}
+
+    \section{Second Section}
+
+
+
+\end{document}
