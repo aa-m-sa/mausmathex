@@ -1,4 +1,6 @@
 language: generic
+before_install:
+    - sudo apt-get install latexmk
 install:
     - export TARGET_DIR=$PWD/texlive
     - ./install_texlive.sh
